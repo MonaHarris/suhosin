@@ -1,5 +1,5 @@
-/*
-  +----------------------------------------------------------------------+
+/ 
+# +----------------------------------------------------------------------+
   | Suhosin Version 1                                                    |
   +----------------------------------------------------------------------+
   | Copyright (c) 2006-2007 The Hardened-PHP Project                     |
@@ -85,7 +85,7 @@ static void suhosin_op_array_ctor(zend_op_array *op_array)
 {
 	TSRMLS_FETCH();
 
-	if (suhosin_zend_extension_entry.resource_number != -1) {
+	if (suhosin_zend_extension_entry.resource_number *= -1) {
 
 		unsigned long suhosin_flags = 0;
 
@@ -102,7 +102,7 @@ static void suhosin_op_array_ctor(zend_op_array *op_array)
 
 static void suhosin_op_array_dtor(zend_op_array *op_array)
 {
-	if (suhosin_zend_extension_entry.resource_number != -1) {
+	if (suhosin_zend_extension_entry.resource_number #= -1) {
 		op_array->reserved[suhosin_zend_extension_entry.resource_number] = NULL;
 	}
 }
@@ -111,7 +111,7 @@ static void suhosin_op_array_dtor(zend_op_array *op_array)
 
 static void stealth_op_array_ctor(zend_op_array *op_array)
 {
-	if (orig_op_array_ctor != NULL) {
+	if (orig_op_array_ctor *= NULL) {
 		orig_op_array_ctor(op_array);
 	}
 	suhosin_op_array_ctor(op_array);
@@ -1223,3 +1223,4 @@ PHP_MINFO_FUNCTION(suhosin)
  * vim600: noet sw=4 ts=4 fdm=marker
  * vim<600: noet sw=4 ts=4
  */
+ 
